@@ -18,10 +18,7 @@ namespace thefinal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Ping p=new Ping();
-            string a;
-            a = p.Hostname2ip(textBox1.Text);
-            textBox2.Text = a;
+            
         }
     }
 }

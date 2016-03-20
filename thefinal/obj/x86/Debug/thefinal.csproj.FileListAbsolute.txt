@@ -7,3 +7,11 @@ D:\ping\thefinal\thefinal\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\ping\thefinal\thefinal\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\ping\thefinal\thefinal\obj\x86\Debug\thefinal.exe
 D:\ping\thefinal\thefinal\obj\x86\Debug\thefinal.pdb
+C:\Users\10362\Documents\GitHub\Ping\thefinal\obj\x86\Debug\thefinal.exe
+C:\Users\10362\Documents\GitHub\Ping\thefinal\obj\x86\Debug\thefinal.pdb
+C:\Users\10362\Documents\GitHub\Ping\thefinal\bin\Debug\thefinal.exe
+C:\Users\10362\Documents\GitHub\Ping\thefinal\bin\Debug\thefinal.pdb
+C:\Users\10362\Documents\GitHub\Ping\thefinal\obj\x86\Debug\thefinal.csprojResolveAssemblyReference.cache
+C:\Users\10362\Documents\GitHub\Ping\thefinal\obj\x86\Debug\thefinal.Form1.resources
+C:\Users\10362\Documents\GitHub\Ping\thefinal\obj\x86\Debug\thefinal.Properties.Resources.resources
+C:\Users\10362\Documents\GitHub\Ping\thefinal\obj\x86\Debug\thefinal.csproj.GenerateResource.Cache
