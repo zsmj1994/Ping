@@ -1,0 +1,9 @@
+D:\ping\thefinal\thefinal\bin\Debug\thefinal.exe
+D:\ping\thefinal\thefinal\bin\Debug\thefinal.pdb
+D:\ping\thefinal\thefinal\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ping\thefinal\thefinal\obj\x86\Debug\thefinal.Form1.resources
+D:\ping\thefinal\thefinal\obj\x86\Debug\thefinal.Properties.Resources.resources
+D:\ping\thefinal\thefinal\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\ping\thefinal\thefinal\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\ping\thefinal\thefinal\obj\x86\Debug\thefinal.exe
+D:\ping\thefinal\thefinal\obj\x86\Debug\thefinal.pdb
