@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -48,35 +48,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(306, 244);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 76);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "连续Ping";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(24, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(57, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "开始";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(121, 32);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(55, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "停止";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 278);
@@ -84,37 +55,53 @@
             this.textBox1.Size = new System.Drawing.Size(192, 21);
             this.textBox1.TabIndex = 3;
             // 
-            // listView1
+            // richTextBox1
             // 
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(12, 89);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(470, 149);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(494, 226);
+            this.richTextBox1.TabIndex = 6;
+            this.richTextBox1.Text = "";
             // 
-            // textBox2
+            // statusStrip1
             // 
-            this.textBox2.Location = new System.Drawing.Point(105, 26);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 21);
-            this.textBox2.TabIndex = 5;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 310);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(518, 22);
+            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.BackColor = System.Drawing.SystemColors.Window;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(131, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
             // 
             // Form1
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(518, 332);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "刘荣歆";
-            this.groupBox1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,12 +110,11 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

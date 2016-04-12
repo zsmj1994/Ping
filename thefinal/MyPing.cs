@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.Net.NetworkInformation;
@@ -21,9 +15,9 @@ namespace thefinal
             IPHostEntry serverHE, fromHE;
             int nBytes = 0;
             int dwStart = 0, dwStop = 0;
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.Icmp);
-            socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.SendTimeout, 1000);
-            socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 1000);
+            Socket socket = new Socket(AddressFamily.InterNetworkV6, SocketType.Raw, ProtocolType.Icmp);
+            socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.SendTimeout, 1000);//send超时值
+            socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReceiveTimeout, 1000);//接收超时
             try
             {
                 serverHE = Dns.GetHostEntry(host);
@@ -73,7 +67,7 @@ namespace thefinal
             Double double_length = Convert.ToDouble(Index);
             Double dtemp = Math.Ceiling(double_length / 2);
 
-            int cksum_buffer_length = Convert.ToInt32(dtemp);
+            int cksum_buffer_length = Convert.ToInt32(dtemp);//20
             //生成一个字节数组
             UInt16[] cksum_buffer = new UInt16[cksum_buffer_length];
             //初始化UInt16类型数组
@@ -122,7 +116,7 @@ namespace thefinal
                     {
                         dwStop = System.Environment.TickCount - dwStart;
                         spentTime = dwStop;
-                        return "Reply from" + epServer.ToString() + "in" + dwStop + "ms.  Received:" + nBytes + "Bytes." + "TTL=" + PingTTl(host);
+                        return "Reply from  " + epServer.ToString() + "  in " + dwStop + "ms.  Received: " + nBytes + "Bytes  " + "TTL=" + PingTTl(host);
                     }
                 }
                 catch(SocketException e)
@@ -182,7 +176,8 @@ namespace thefinal
                 counter++;
                 size--;
             }
-            //弱ICMP报头为奇数个字节，就会剩下最后一个字节，把最后一个字节视为一个*2个字节数据的高字节，这个字节数据的低字节继续累加
+            //弱ICMP报头为奇数个字节，就会剩下最后一个字节，把最后一个字节视为一个*2个字节数据的高字节，
+            //这个字节数据的低字节继续累加
             cksum = (cksum >> 16) + (cksum & 0xffff);
             cksum += (cksum >> 16);
             return (UInt16)(~cksum);
